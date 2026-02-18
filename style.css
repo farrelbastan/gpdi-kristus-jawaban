@@ -1,0 +1,142 @@
+ * { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #1e293b;
+  background: #f8fafc;
+}
+
+/* NAVBAR */
+nav {
+  background: white;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e293b;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+nav a:hover { color: #2563eb; }
+
+nav a.active {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.page-hero {
+  background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* SECTION */
+.section {
+  padding: 90px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(37,99,235,.15);
+}
+
+.highlight {
+  border: 2px solid #2563eb;
+  transform: scale(1.05);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+/* BUTTON */
+.button {
+  background: #2563eb;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: .3s;
+}
+
+.button:hover { background: #1e40af; }
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* LOGO */
+.logo-hover {
+  transition: .4s;
+}
+.logo-hover:hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #22c55e;
+  padding: 16px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

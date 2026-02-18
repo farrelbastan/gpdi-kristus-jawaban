@@ -1,0 +1,267 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kami - GPdI Kristus Jawaban</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#003f88;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+z-index:9999;
+}
+#loader img{
+width:100px;
+margin-bottom:20px;
+animation:spin 3s linear infinite;
+}
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* NAVBAR */
+header{
+position:sticky;
+top:0;
+background:#003f88;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-area{
+display:flex;
+align-items:center;
+color:white;
+font-weight:600;
+font-size:18px;
+}
+.logo-area img{
+height:45px;
+margin-right:10px;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#0052cc,#007bff);
+color:white;
+padding:110px 20px;
+text-align:center;
+}
+
+/* SECTION */
+.section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* TWO COLUMN */
+.two-col{
+display:flex;
+flex-wrap:wrap;
+gap:60px;
+align-items:center;
+}
+
+.text{
+flex:1;
+min-width:300px;
+}
+
+.image{
+flex:1;
+min-width:300px;
+}
+.image img{
+width:100%;
+border-radius:15px;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* VISI MISI */
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+margin-top:40px;
+}
+.card{
+flex:1;
+min-width:250px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* GEMBALA */
+.gembala{
+display:flex;
+flex-wrap:wrap;
+gap:50px;
+align-items:center;
+margin-top:60px;
+}
+.gembala img{
+width:250px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.footer{
+background:#003f88;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+<img src="logo.png">
+<h2>GPdI Kristus Jawaban</h2>
+</div>
+
+<header>
+<div class="logo-area">
+<img src="logo.png">
+<span>GPdI Kristus Jawaban</span>
+</div>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="tentang.html">Tentang</a>
+<a href="jadwal.html">Jadwal</a>
+<a href="media.html">Media</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Tentang Kami</h1>
+<p>Menjadi Terang, Membawa Pemulihan, Menjangkau Bangsa</p>
+</section>
+
+<section class="section">
+
+<div class="two-col" data-aos="fade-up">
+<div class="text">
+<h2>Sejarah Singkat</h2>
+<p>
+GPdI Kristus Jawaban hadir sebagai gereja yang memiliki kerinduan
+untuk melihat jiwa-jiwa dipulihkan dan bertumbuh dalam pengenalan akan Tuhan.
+Dengan visi nasional, gereja ini terus bergerak membawa terang Kristus
+ke tengah masyarakat.
+</p>
+</div>
+
+<div class="image">
+<img src="logo.png">
+</div>
+</div>
+
+<div class="cards" data-aos="fade-up">
+<div class="card">
+<h3>Visi</h3>
+<p>
+Menjadi gereja yang berdampak secara nasional dan internasional,
+membawa terang Kristus bagi bangsa.
+</p>
+</div>
+
+<div class="card">
+<h3>Misi</h3>
+<p>
+• Memberitakan Injil dengan kuasa Roh Kudus<br>
+• Membina jemaat dalam pertumbuhan rohani<br>
+• Mengutus pekerja untuk menjangkau bangsa
+</p>
+</div>
+</div>
+
+<div class="gembala" data-aos="fade-up">
+<img src="logo.png">
+<div>
+<h2>Pdt. Nanau Wasiyono</h2>
+<p>
+Sebagai gembala sidang GPdI Kristus Jawaban,
+beliau memiliki kerinduan besar untuk melihat generasi dipulihkan,
+dibangun, dan diutus menjadi terang bagi bangsa.
+</p>
+</div>
+</div>
+
+</section>
+
+<div class="footer">
+© 2026 GPdI Kristus Jawaban
+</div>
+
+<a class="whatsapp" href="https://wa.me/62812645847" target="_blank">WA</a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+window.addEventListener("load",function(){
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+},1500);
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,259 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Ibadah - GPdI Kristus Jawaban</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#003f88;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+z-index:9999;
+}
+#loader img{
+width:100px;
+margin-bottom:20px;
+animation:spin 3s linear infinite;
+}
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* NAVBAR */
+header{
+position:sticky;
+top:0;
+background:#003f88;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-area{
+display:flex;
+align-items:center;
+color:white;
+font-weight:600;
+font-size:18px;
+}
+.logo-area img{
+height:45px;
+margin-right:10px;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
+nav a:hover{
+color:#cce6ff;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#0052cc,#007bff);
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+/* TABS */
+.tabs{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+.tab-btn{
+padding:12px 25px;
+border:none;
+background:#e0ecff;
+cursor:pointer;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+.tab-btn.active{
+background:#003f88;
+color:white;
+}
+
+/* CARDS */
+.cards{
+display:none;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+.cards.active{
+display:flex;
+}
+.card{
+background:white;
+padding:30px;
+width:280px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.footer{
+background:#003f88;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+<img src="logo.png">
+<h2>GPdI Kristus Jawaban</h2>
+</div>
+
+<header>
+<div class="logo-area">
+<img src="logo.png">
+<span>GPdI Kristus Jawaban</span>
+</div>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="tentang.html">Tentang</a>
+<a href="jadwal.html">Jadwal</a>
+<a href="media.html">Media</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Jadwal Pelayanan</h1>
+<p>Datang dan bertumbuh bersama kami</p>
+</section>
+
+<section class="section" data-aos="fade-up">
+
+<div class="tabs">
+<button class="tab-btn active" onclick="openTab('raya',this)">Ibadah Raya</button>
+<button class="tab-btn" onclick="openTab('youth',this)">Youth</button>
+<button class="tab-btn" onclick="openTab('event',this)">Event Khusus</button>
+</div>
+
+<!-- IBADAH RAYA -->
+<div id="raya" class="cards active">
+<div class="card">
+<h3>Minggu Raya</h3>
+<p>Minggu</p>
+<p><strong>10.00 WIB</strong></p>
+</div>
+<div class="card">
+<h3>Ibadah Doa</h3>
+<p>Rabu</p>
+<p><strong>19.00 WIB</strong></p>
+</div>
+</div>
+
+<!-- YOUTH -->
+<div id="youth" class="cards">
+<div class="card">
+<h3>Youth Service</h3>
+<p>Sabtu</p>
+<p><strong>18.30 WIB</strong></p>
+</div>
+</div>
+
+<!-- EVENT -->
+<div id="event" class="cards">
+<div class="card">
+<h3>Konferensi Rohani</h3>
+<p>Tanggal akan diumumkan</p>
+</div>
+</div>
+
+</section>
+
+<div class="footer">
+© 2026 GPdI Kristus Jawaban
+</div>
+
+<a class="whatsapp" href="https://wa.me/62812645847" target="_blank">WA</a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+/* Loader */
+window.addEventListener("load",function(){
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+},1500);
+});
+
+/* Tabs */
+function openTab(tabId,btn){
+let tabs=document.querySelectorAll(".cards");
+let buttons=document.querySelectorAll(".tab-btn");
+
+tabs.forEach(tab=>tab.classList.remove("active"));
+buttons.forEach(b=>b.classList.remove("active"));
+
+document.getElementById(tabId).classList.add("active");
+btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>
+

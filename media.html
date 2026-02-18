@@ -1,0 +1,301 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media - GPdI Kristus Jawaban</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#003f88;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+z-index:9999;
+}
+#loader img{
+width:100px;
+margin-bottom:20px;
+animation:spin 3s linear infinite;
+}
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* NAVBAR */
+header{
+position:sticky;
+top:0;
+background:#003f88;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-area{
+display:flex;
+align-items:center;
+color:white;
+font-weight:600;
+font-size:18px;
+}
+.logo-area img{
+height:45px;
+margin-right:10px;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#0052cc,#007bff);
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+/* FILTER BUTTON */
+.filter-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+.filter-btn{
+padding:10px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#e0ecff;
+font-weight:600;
+transition:0.3s;
+}
+.filter-btn.active{
+background:#003f88;
+color:white;
+}
+
+/* VIDEO CARDS */
+.video-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+.video-card{
+width:300px;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.3s;
+}
+.video-card:hover{
+transform:translateY(-8px);
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+.modal-content{
+width:80%;
+max-width:800px;
+}
+.modal iframe{
+width:100%;
+height:450px;
+border-radius:12px;
+}
+.close{
+position:absolute;
+top:20px;
+right:40px;
+color:white;
+font-size:30px;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+background:#003f88;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+<img src="logo.png">
+<h2>GPdI Kristus Jawaban</h2>
+</div>
+
+<header>
+<div class="logo-area">
+<img src="logo.png">
+<span>GPdI Kristus Jawaban</span>
+</div>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="tentang.html">Tentang</a>
+<a href="jadwal.html">Jadwal</a>
+<a href="media.html">Media</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Media Pelayanan</h1>
+<p>Saksikan khotbah dan kegiatan terbaru</p>
+</section>
+
+<section class="section" data-aos="fade-up">
+
+<div class="filter-buttons">
+<button class="filter-btn active" onclick="filterSelection('all',this)">Semua</button>
+<button class="filter-btn" onclick="filterSelection('raya',this)">Ibadah Raya</button>
+<button class="filter-btn" onclick="filterSelection('youth',this)">Youth</button>
+<button class="filter-btn" onclick="filterSelection('event',this)">Event Khusus</button>
+</div>
+
+<div class="video-grid">
+
+<div class="video-card raya" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<h3>Ibadah Raya Minggu</h3>
+<p>Khotbah terbaru</p>
+</div>
+
+<div class="video-card youth" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<h3>Youth Service</h3>
+<p>Generasi muda radikal</p>
+</div>
+
+<div class="video-card event" onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<h3>Konferensi Rohani</h3>
+<p>Event nasional</p>
+</div>
+
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="videoModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+<iframe id="modalVideo" src="" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="footer">
+© 2026 GPdI Kristus Jawaban
+</div>
+
+<a class="whatsapp" href="https://wa.me/62812645847" target="_blank">WA</a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+/* Loader */
+window.addEventListener("load",function(){
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+},1500);
+});
+
+/* FILTER */
+function filterSelection(category,btn){
+let cards=document.getElementsByClassName("video-card");
+let buttons=document.querySelectorAll(".filter-btn");
+
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+
+for(let i=0;i<cards.length;i++){
+if(category==="all"){
+cards[i].style.display="block";
+}else{
+cards[i].style.display=cards[i].classList.contains(category) ? "block":"none";
+}
+}
+}
+
+/* MODAL */
+function openModal(videoURL){
+document.getElementById("videoModal").style.display="flex";
+document.getElementById("modalVideo").src=videoURL;
+}
+
+function closeModal(){
+document.getElementById("videoModal").style.display="none";
+document.getElementById("modalVideo").src="";
+}
+
+window.onclick=function(event){
+if(event.target==document.getElementById("videoModal")){
+closeModal();
+}
+}
+</script>
+
+</body>
+</html>
+
